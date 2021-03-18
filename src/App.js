@@ -2,6 +2,7 @@ import React,{useState} from 'react';
 import './App.css';
 import Navigation from './components/navigation/Navigation'; 
 import SignIn from './components/signIn/SignIn'; 
+import Register from './components/register/Register'; 
 import Logo from './components/logo/Logo'; 
 import Rank from './components/rank/Rank'; 
 import ImageLinkForm from './components/imageLinkForm/ImageLinkForm'; 
@@ -71,11 +72,13 @@ const onRouteChange = (value) =>{
     <div className="App">
     <Particles params={particleparam} className="particles"/>
     <Navigation onRouteChange={onRouteChange}/>
-    {route==='signin'?<SignIn onRouteChange={onRouteChange}/>:<div>
+    {route==='home'?<div>
     <Logo/>
     <Rank/>
     <ImageLinkForm onInputChange={onInputChange} onBtnSubmit={onBtnSubmit}/>
-    <FaceRecognition box={box} imageUrl={imageUrl}/></div>}
+    <FaceRecognition box={box} imageUrl={imageUrl}/></div>
+    :(route==='signin')?<SignIn onRouteChange={onRouteChange}/>
+    :<Register onRouteChange={onRouteChange}/>}
     </div>
   );
 }
