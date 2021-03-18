@@ -5,7 +5,7 @@ const Navigation = ({onRouteChange,route}) => {
             route==='home'?
             <nav style={{display:'flex', justifyContent:'flex-end'}}>
             <p onClick={()=>onRouteChange('signin')} 
-            className='f3 link din black underline p3 pointer'>Sign Out</p>
+            className='f3 link din black underline p3 pointer mr3'>Sign Out</p>
             </nav>
             :
             <div>
@@ -14,7 +14,7 @@ const Navigation = ({onRouteChange,route}) => {
             className='f3 link din black underline p3 pointer'>Sign In</p>
             <p className='f3 link din black p3'>/</p>
             <p onClick={()=>onRouteChange('register')} 
-            className='f3 link din black underline p3 pointer'>Register</p>
+            className='f3 link din black underline p3 pointer mr3'>Register</p>
             </nav>
             </div>
         
