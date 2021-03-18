@@ -1,10 +1,26 @@
 import React from 'react'
 
-const Navigation = ({onRouteChange}) => {
+const Navigation = ({onRouteChange,route}) => {
     return (
-       <nav style={{display:'flex', justifyContent:'flex-end'}}>
-           <p onClick={()=>onRouteChange('signin')} className='f3 link din black underline p3 pointer'>Sign Out</p>
-       </nav>
+            route==='home'?
+            <nav style={{display:'flex', justifyContent:'flex-end'}}>
+            <p onClick={()=>onRouteChange('signin')} 
+            className='f3 link din black underline p3 pointer'>Sign Out</p>
+            </nav>
+            :
+            <div>
+            <nav style={{display:'flex', justifyContent:'flex-end'}}>
+            <p onClick={()=>onRouteChange('signin')} 
+            className='f3 link din black underline p3 pointer'>Sign In</p>
+            <p className='f3 link din black p3'>/</p>
+            <p onClick={()=>onRouteChange('register')} 
+            className='f3 link din black underline p3 pointer'>Register</p>
+            </nav>
+            </div>
+        
+            
+        
+       
     )
 }
 

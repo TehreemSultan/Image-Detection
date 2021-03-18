@@ -31,7 +31,7 @@ function App() {
   const [input, setinput] = useState('');
   const [imageUrl, setimageUrl] = useState('');
   const [box, setbox] = useState({});
-  const [route, setroute] = useState('signin')
+  const [route, setroute] = useState('signin');
 
   
 const onInputChange= (e) =>{
@@ -71,7 +71,7 @@ const onRouteChange = (value) =>{
   return (
     <div className="App">
     <Particles params={particleparam} className="particles"/>
-    <Navigation onRouteChange={onRouteChange}/>
+    <Navigation onRouteChange={onRouteChange} route={route}/>
     {route==='home'?<div>
     <Logo/>
     <Rank/>
